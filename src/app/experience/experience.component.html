@@ -15,7 +15,7 @@
             </div>
         </header><!-- /o-section__header -->
 
-        <div class="o-section__content  t-section__content  u-pb-0">
+        <div class="o-section__content  t-section__content  u-pb-0" *ngIf="cvData && cvData.experience">
 
             <div class="a-experience-timeline  c-timeline  t-border-color">
 
@@ -25,22 +25,20 @@
                         <div class="o-grid">
                             <div class="o-grid__col-md-5">
                                 <div class="c-work__timeframe">
-                                    2014 &ndash; 2017
+                                  {{ cvData.experience.jobs[0].startDate }}  &ndash; {{ cvData.experience.jobs[0].endDate }}
                                 </div>
                                 <h3 class="c-work__heading">
-                                    OlympusMu (Server Game and Website)
+                                  {{ cvData.experience.jobs[0].employer }}
                                 </h3>
                                 <h4 class="c-work__title">
-                                    Web and Server Dev.
+                                  {{ cvData.experience.jobs[0].job }}
                                 </h4>
                                 <div class="c-work__location">
-                                    Stockholm, SE
+                                  {{ cvData.experience.jobs[0].location }}
                                 </div>
                             </div>
                             <div class="o-grid__col-md-7">
-                                <p>
-                                  I worked with a game server where my primary responsibility was to seamlessly integrate the server with a website using HTML, PHP, and MSSQL as the database. This project required a deep understanding of real-time data handling, server management, and the effective integration between the game server and the website. This experience allowed me to further enhance my web development skills and gain valuable knowledge in various aspects of server-side development.
-                                </p>
+                                <div [innerHTML]="cvData.experience.jobs[0].info"></div>
                             </div>
                         </div><!-- /o-grid -->
                     </div><!-- /o-content -->
@@ -65,9 +63,6 @@
                                 </div>
                             </div>
                             <div class="o-grid__col-md-7">
-                                <p>
-                                  My journey with frameworks started when I attended Chas Academy, where I was introduced to this powerful frontend framework. Studying at Chas Academy played a pivotal role in strengthening my understanding of frameworks and its various features, which enabled me to develop efficient, scalable, and user-friendly web applications.
-                                </p>
                             </div>
                         </div><!-- /o-grid -->
                     </div><!-- /o-content -->

@@ -4,6 +4,7 @@
 <div class="o-container">
   <div class="o-section__container">
 
+      <!-- /o-section__header -->
       <header class="o-section__header  t-section__header">
           <div class="o-content">
               <h2 class="o-section__heading">
@@ -13,36 +14,39 @@
                   Every day is learningDay!
               </div>
           </div>
-      </header><!-- /o-section__header -->
+      </header>
 
-      <div class="o-section__content  t-section__content  ">
+      <div class="o-section__content  t-section__content">
 
-          <div class="o-grid">
+          <div class="o-grid" *ngIf="cvData && cvData.skills">
 
+              <!-- /o-grid__col -->
               <div class="o-grid__col-sm-6">
                   <div class="o-content">
                       <div class="o-media  o-media--block">
                           <div class="o-media__figure">
                               <div class="c-number  t-primary-color">
-                                  80<small>%</small>
+                                {{ cvData.skills.photoshop }}<small>%</small>
                               </div>
                           </div>
                           <div class="o-media__body">
                               <h3>Photoshop</h3>
+
                           </div>
                       </div>
                       <div class="c-progress-bar  o-content__body  t-border-color-bg  u-mt-text">
-                          <div class="a-progress-bar  c-progress-bar__filler  t-primary-bg" data-percent="80"></div>
+                          <div class="a-progress-bar  c-progress-bar__filler  t-primary-bg" [style.width.%]="cvData.skills.photoshop"></div>
                       </div>
                   </div>
-              </div><!-- /o-grid__col -->
+              </div>
 
+              <!-- /o-grid__col -->
               <div class="o-grid__col-sm-6">
                   <div class="o-content">
                       <div class="o-media  o-media--block">
                           <div class="o-media__figure">
                               <div class="c-number  t-primary-color">
-                                  80<small>%</small>
+                                {{ cvData.skills.javascript }}<small>%</small>
                               </div>
                           </div>
                           <div class="o-media__body">
@@ -50,17 +54,18 @@
                           </div>
                       </div>
                       <div class="c-progress-bar  o-content__body  t-border-color-bg  u-mt-text">
-                          <div class="a-progress-bar  c-progress-bar__filler  t-primary-bg" data-percent="80"></div>
+                          <div class="a-progress-bar  c-progress-bar__filler  t-primary-bg" [style.width.%]="cvData.skills.javascript"></div>
                       </div>
                   </div>
-              </div><!-- /o-grid__col -->
+              </div>
 
+              <!-- /o-grid__col -->
               <div class="o-grid__col-sm-6">
                   <div class="o-content">
                       <div class="o-media  o-media--block">
                           <div class="o-media__figure">
                               <div class="c-number  t-primary-color">
-                                  100<small>%</small>
+                                {{ cvData.skills.git }}<small>%</small>
                               </div>
                           </div>
                           <div class="o-media__body">
@@ -68,17 +73,18 @@
                           </div>
                       </div>
                       <div class="c-progress-bar  o-content__body  t-border-color-bg  u-mt-text">
-                          <div class="a-progress-bar  c-progress-bar__filler  t-primary-bg" data-percent="100"></div>
+                          <div class="a-progress-bar  c-progress-bar__filler  t-primary-bg" [style.width.%]="cvData.skills.git"></div>
                       </div>
                   </div>
-              </div><!-- /o-grid__col -->
+              </div>
 
+              <!-- /o-grid__col -->
               <div class="o-grid__col-sm-6">
                   <div class="o-content">
                       <div class="o-media  o-media--block">
                           <div class="o-media__figure">
                               <div class="c-number  t-primary-color">
-                                  70<small>%</small>
+                                {{ cvData.skills.php }}<small>%</small>
                               </div>
                           </div>
                           <div class="o-media__body">
@@ -86,17 +92,18 @@
                           </div>
                       </div>
                       <div class="c-progress-bar  o-content__body  t-border-color-bg  u-mt-text">
-                          <div class="a-progress-bar  c-progress-bar__filler  t-primary-bg" data-percent="70"></div>
+                          <div class="a-progress-bar  c-progress-bar__filler  t-primary-bg" [style.width.%]="cvData.skills.php"></div>
                       </div>
                   </div>
-              </div><!-- /o-grid__col -->
+              </div>
 
+              <!-- /o-grid__col -->
               <div class="o-grid__col-sm-6">
                   <div class="o-content">
                       <div class="o-media  o-media--block">
                           <div class="o-media__figure">
                               <div class="c-number  t-primary-color">
-                                  80<small>%</small>
+                                {{ cvData.skills.typescript }}<small>%</small>
                               </div>
                           </div>
                           <div class="o-media__body">
@@ -104,17 +111,18 @@
                           </div>
                       </div>
                       <div class="c-progress-bar  o-content__body  t-border-color-bg  u-mt-text">
-                          <div class="a-progress-bar  c-progress-bar__filler  t-primary-bg" data-percent="80"></div>
+                          <div class="a-progress-bar  c-progress-bar__filler  t-primary-bg" [style.width.%]="cvData.skills.typescript"></div>
                       </div>
                   </div>
-              </div><!-- /o-grid__col -->
+              </div>
 
+              <!-- /o-grid__col -->
               <div class="o-grid__col-sm-6">
                   <div class="o-content">
                       <div class="o-media  o-media--block">
                           <div class="o-media__figure">
                               <div class="c-number  t-primary-color">
-                                  100<small>%</small>
+                                {{ cvData.skills.mongodb }}<small>%</small>
                               </div>
                           </div>
                           <div class="o-media__body">
@@ -122,17 +130,18 @@
                           </div>
                       </div>
                       <div class="c-progress-bar  o-content__body  t-border-color-bg  u-mt-text">
-                          <div class="a-progress-bar  c-progress-bar__filler  t-primary-bg" data-percent="100"></div>
+                          <div class="a-progress-bar  c-progress-bar__filler  t-primary-bg" [style.width.%]="cvData.skills.mongodb"></div>
                       </div>
                   </div>
-              </div><!-- /o-grid__col -->
+              </div>
 
+              <!-- /o-grid__col -->
               <div class="o-grid__col-sm-6">
                   <div class="o-content">
                       <div class="o-media  o-media--block">
                           <div class="o-media__figure">
                               <div class="c-number  t-primary-color">
-                                  80<small>%</small>
+                                {{ cvData.skills.mysql }}<small>%</small>
                               </div>
                           </div>
                           <div class="o-media__body">
@@ -140,17 +149,18 @@
                           </div>
                       </div>
                       <div class="c-progress-bar  o-content__body  t-border-color-bg  u-mt-text">
-                          <div class="a-progress-bar  c-progress-bar__filler  t-primary-bg" data-percent="80"></div>
+                          <div class="a-progress-bar  c-progress-bar__filler  t-primary-bg" [style.width.%]="cvData.skills.mysql"></div>
                       </div>
                   </div>
-              </div><!-- /o-grid__col -->
+              </div>
 
+              <!-- /o-grid__col -->
               <div class="o-grid__col-sm-6">
                   <div class="o-content">
                       <div class="o-media  o-media--block">
                           <div class="o-media__figure">
                               <div class="c-number  t-primary-color">
-                                  80<small>%</small>
+                                {{ cvData.skills.mssql }}<small>%</small>
                               </div>
                           </div>
                           <div class="o-media__body">
@@ -158,17 +168,17 @@
                           </div>
                       </div>
                       <div class="c-progress-bar  o-content__body  t-border-color-bg  u-mt-text">
-                          <div class="a-progress-bar  c-progress-bar__filler  t-primary-bg" data-percent="80"></div>
+                          <div class="a-progress-bar  c-progress-bar__filler  t-primary-bg" [style.width.%]="cvData.skills.mssql"></div>
                       </div>
                   </div>
-              </div><!-- /o-grid__col -->
+              </div>
 
           </div><!-- /o-grid -->
 
-      </div><!-- /o-section__content -->
+      </div>
 
-  </div><!-- /o-section__container -->
-</div><!-- /o-container -->
+  </div>
+</div>
 
 
 

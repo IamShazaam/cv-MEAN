@@ -17,7 +17,7 @@
 
         <div class="o-section__content  t-section__content  ">
 
-            <div class="o-grid">
+            <div class="o-grid" *ngIf="cvData && cvData.expertise">
 
                 <div class="o-grid__col-sm-6">
                     <div class="o-media  o-media--block  o-content">
@@ -28,9 +28,7 @@
                         </div>
                         <div class="o-media__body  o-content__body">
                             <h3>Advanced CSS</h3>
-                            <p>
-                              I prefer to work with raw CSS as it allows me to have more control and flexibility in my projects without being limited by the structure of a CSS framework.
-                              This approach has served me well in my projects involving PHP, JavaScript, and TypeScript, enabling me to create highly customized and responsive designs.
+                            <div [innerHTML]="cvData.expertise.advanceCSS"></div>
                         </div>
                     </div><!-- /o-media o-content -->
                 </div><!-- /o-grid__col -->
@@ -44,9 +42,7 @@
                         </div>
                         <div class="o-media__body  o-content__body">
                             <h3>Front-end Design</h3>
-                            <p>
-                              I have created templates for various CMS with different types of languages. My experience at <a href="http://chasacademy.se" target="_blank">ChasAcademy</a> helped me refine my frontend skills, particularly with the use of Angular, to create more polished and responsive designs. I have also worked with Laravel for PHP, which has further broadened my expertise in web development.
-                            </p>
+                            <div [innerHTML]="cvData.expertise.frontEndDesign"></div>
                         </div>
                     </div><!-- /o-media o-content -->
                 </div><!-- /o-grid__col -->
@@ -60,9 +56,7 @@
                         </div>
                         <div class="o-media__body  o-content__body">
                             <h3>Object-oriented PHP</h3>
-                            <p>
-                              I have valuable experience and understanding by working with PHP-based CMS. Learning the importance of having functions inside a class to ensure proper functionality and maintainability of an app. This experience has allowed me to create well-structured and efficient PHP apps.
-                            </p>
+                              <div [innerHTML]="cvData.expertise.objectOrientedPHP"></div>
                         </div>
                     </div><!-- /o-media o-content -->
                 </div><!-- /o-grid__col -->
@@ -76,10 +70,7 @@
                         </div>
                         <div class="o-media__body  o-content__body">
                             <h3>JavaScript / Back-End</h3>
-                            <p>
-                              My experience at <a href="http://chasacademy.se" target="_blank">ChasAcademy</a> helped me refine my frontend skills, particularly with the use of Angular, which in turn fortified my understanding of JavaScript and TypeScript.
-                              This knowledge has enabled me to create well-structured backends and manage the development of properly functioning applications.
-                            </p>
+                             <div [innerHTML]="cvData.expertise.javascript"></div>
                         </div>
                     </div><!-- /o-media o-content -->
                 </div><!-- /o-grid__col -->
