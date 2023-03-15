@@ -27,7 +27,12 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/jquery.min.js",
+              "src/main.js",
+              "src/scrollreveal.min.js",
+              "src/nivo-lightbox.min.js"
+            ]
           },
           "configurations": {
             "production": {
