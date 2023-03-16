@@ -45,28 +45,29 @@
                 </div><!-- /c-timeline__item -->
 
                 <div class="c-timeline__item">
-                    <div class="c-timeline__point  t-timeline__point  t-primary-bg"></div>
-                    <div class="o-content">
-                        <div class="o-grid">
-                            <div class="o-grid__col-md-5">
-                                <div class="c-work__timeframe">
-                                    2020 &ndash; present
-                                </div>
-                                <h3 class="c-work__heading">
-                                    WebDeveloper
-                                </h3>
-                                <h4 class="c-work__title">
-                                    Front-end & Back-End
-                                </h4>
-                                <div class="c-work__location">
-                                    Stockholm, SE
-                                </div>
-                            </div>
-                            <div class="o-grid__col-md-7">
-                            </div>
-                        </div><!-- /o-grid -->
-                    </div><!-- /o-content -->
-                </div><!-- /c-timeline__item -->
+                  <div class="c-timeline__point  t-timeline__point  t-primary-bg"></div>
+                  <div class="o-content">
+                      <div class="o-grid">
+                          <div class="o-grid__col-md-5">
+                              <div class="c-work__timeframe">
+                                {{ cvData.experience.jobs[1].startDate }}  &ndash; {{ cvData.experience.jobs[1].endDate }}
+                              </div>
+                              <h3 class="c-work__heading">
+                                {{ cvData.experience.jobs[1].employer }}
+                              </h3>
+                              <h4 class="c-work__title">
+                                {{ cvData.experience.jobs[1].job }}
+                              </h4>
+                              <div class="c-work__location">
+                                {{ cvData.experience.jobs[1].location }}
+                              </div>
+                          </div>
+                          <div class="o-grid__col-md-7">
+                              <div [innerHTML]="cvData.experience.jobs[1].info"></div>
+                          </div>
+                      </div><!-- /o-grid -->
+                  </div><!-- /o-content -->
+              </div><!-- /c-timeline__item -->
 
             </div><!-- /c-timeline -->
 

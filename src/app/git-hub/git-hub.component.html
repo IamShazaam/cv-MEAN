@@ -15,14 +15,41 @@
             </div>
         </header><!-- /o-section__header -->
 
-        <div class="o-section__content  t-section__content  o-section__full-bottom-space">
 
-            <div class="o-grid  o-grid--gallery">
+        <div class="o-section__content  t-section__content  u-pt-0">
 
+          <div class="o-content">
+              <div class="a-education-timeline  c-timeline  t-border-color  o-section__full-top-space">
+                  <div class="c-timeline__end  t-border-color"></div>
 
-            </div><!-- /o-grid -->
+                  <div class="c-timeline__item"  *ngFor="let repo of repos | slice:0:1">
+                      <div class="c-timeline__point  t-timeline__point  t-primary-bg"></div>
+                      <div class="o-content">
+                        <div class="o-grid"   *ngFor="let repo of repos | slice:0:1">
+                          <div class="o-grid__col-md-5">
+                              <div class="c-work__timeframe">
+                                Updated: {{ repo.updated_at }}
+                              </div>
+                              <h3 class="c-work__heading">
+                                <a href="{{ repo.html_url }}" class="forumBlock-text_link" target="_blank">{{ repo.name }}</a>
+                              </h3>
+                              <h4 class="c-work__title">
+                                Made by <a href="{{ repo.owner.html_url }}" title="{{ repo.owner.login }}" target="_blank">{{ repo.owner.login }}</a>
+                              </h4>
+                              <div class="c-work__location">
+                                <div class="forumBlock-ava">
+                                  <img src="{{ repo.owner.avatar_url }}" alt="">
+                                </div>
+                              </div>
+                          </div>
+                      </div><!-- /o-grid -->
+                      </div><!-- /o-content -->
+                  </div><!-- /c-timeline__item -->
+                  <p>more repositories, coming soon..</p>
+              </div><!-- /c-timeline -->
+          </div><!-- /o-content -->
 
-        </div><!-- /o-section__content -->
+      </div><!-- /o-section__content -->
 
     </div><!-- /o-section__container -->
 </div><!-- /o-container -->
