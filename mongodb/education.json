@@ -1,0 +1,19 @@
+[{
+  "_id": "640fe563bc6ac64b1cb2a924",
+  "schools": [
+    {
+      "school_name": "Stockholms University",
+      "school_program": "Swedish as a foreign language",
+      "school_location": "Stockholm SE",
+      "startDate": "2015-01-09",
+      "endDate": "2016-05-30"
+    },
+    {
+      "school_name": "ChasAcademy",
+      "school_program": "FullStack Developer",
+      "school_location": "Stockholm SE",
+      "startDate": "2020-08-19",
+      "endDate": "2022-05-30"
+    }
+  ]
+}]

@@ -1,0 +1,11 @@
+[{
+  "_id": "640fe563bc6ac64b1cb2a923",
+  "photoshop": 80,
+  "javascript": 80,
+  "git": 100,
+  "typescript": 80,
+  "php": 70,
+  "mongodb": 100,
+  "mysql": 80,
+  "mssql": 80
+}]

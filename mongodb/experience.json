@@ -1,0 +1,21 @@
+[{
+  "_id": "640fe563bc6ac64b1cb2a922",
+  "jobs": [
+    {
+      "employer": "OlympusMu (Server Game & Website)",
+      "job": "Web and Server Dev.",
+      "location": "Stockholm, SE",
+      "info": "<p>I worked with a game server where my primary responsibility was to seamlessly integrate the server with a website using HTML, PHP, and MSSQL as the database. This project required a deep understanding of real-time data handling, server management, and the effective integration between the game server and the website. This experience allowed me to further enhance my web development skills and gain valuable knowledge in various aspects of server-side development.</p>",
+      "startDate": "2014",
+      "endDate": "2017"
+    },
+    {
+      "employer": "WEBDEVELOPER",
+      "job": "Front-end & Back-End",
+      "location": "Stockholm, SE",
+      "info": "<p>My journey with frameworks started when I attended Chas Academy, where I was introduced to this powerful frontend framework. Studying at Chas Academy played a pivotal role in strengthening my understanding of frameworks and its various features, which enabled me to develop efficient, scalable, and user-friendly web applications.</p>",
+      "startDate": "2020",
+      "endDate": "present"
+    }
+  ]
+}]
