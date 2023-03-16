@@ -28,7 +28,7 @@
                         <div class="o-grid"   *ngFor="let repo of repos | slice:0:1">
                           <div class="o-grid__col-md-5">
                               <div class="c-work__timeframe">
-                                Updated: {{ repo.updated_at }}
+                                Updated: {{ repo.updated_at | date:'yyyy-MM-dd'  }}
                               </div>
                               <h3 class="c-work__heading">
                                 <a href="{{ repo.html_url }}" class="forumBlock-text_link" target="_blank">{{ repo.name }}</a>
