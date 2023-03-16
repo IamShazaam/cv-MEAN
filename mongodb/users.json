@@ -1,0 +1,15 @@
+[{
+  "_id": "640fe563bc6ac64b1cb2a91f",
+  "firstName": "Jorge",
+  "lastName": "Pereda",
+  "email": "jorge@gmail.com",
+  "carrier": "FullStack Developer",
+  "location": "Stockholm - SE",
+  "phone": "+46707763018",
+  "web": "teampereda.com",
+  "introId": "640fe563bc6ac64b1cb2a920",
+  "expertiseId": "640fe563bc6ac64b1cb2a921",
+  "experienceId": "640fe563bc6ac64b1cb2a922",
+  "skillsId": "640fe563bc6ac64b1cb2a923",
+  "educationId": "640fe563bc6ac64b1cb2a924"
+}]
