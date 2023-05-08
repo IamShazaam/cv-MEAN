@@ -12,7 +12,7 @@ export class GitHubComponent {
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
-    const headers = new HttpHeaders({ 'Authorization': 'Bearer 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' });
+    const headers = new HttpHeaders({ 'Authorization': 'Bearer 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' });
     this.http.get<any[]>('https://api.github.com/user/repos', { headers }).subscribe(
       (repos) => {
         console.log(repos); // Log the response to the console
