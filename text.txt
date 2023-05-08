@@ -1,0 +1,5 @@
+pm2 list
+git
+pm2 start server.js
+pm2 logs server
+ng build --configuration production
