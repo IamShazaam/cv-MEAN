@@ -13,7 +13,6 @@ app.use(bodyParser.json());
 
 //Initializing MongoDB
 const uri = 'mongodb+srv://aws:aws@cvmean.bc7hasf.mongodb.net/?retryWrites=true&w=majority';
-// const uri = 'mongodb://127.0.0.1:27017/CV';
 
 //MongoDB connection
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverSelectionTimeoutMS: 10000 });
