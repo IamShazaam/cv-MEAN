@@ -12,13 +12,18 @@ app.use(cors());
 app.use(bodyParser.json());
 
 //Initializing MongoDB
-const uri = 'mongodb://127.0.0.1:27017/CV';
+const uri = 'mongodb+srv://aws:aws@cvmean.bc7hasf.mongodb.net/?retryWrites=true&w=majority';
+// const uri = 'mongodb://127.0.0.1:27017/CV';
 
 //MongoDB connection
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverSelectionTimeoutMS: 10000 });
 console.log('Attempting to connect to MongoDB...');
 
 app.get('/api/cv', async (req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+
   console.log('Received request for /api/cv');
   try {
     const result = {};
@@ -27,7 +32,7 @@ app.get('/api/cv', async (req, res) => {
     // Fetching data
     for (const collectionName of collections) {
       console.log(`Fetching data from collection: ${collectionName}`);
-      const collection = client.db('CV').collection(collectionName);
+      const collection = client.db('cvMean').collection(collectionName);
       const data = await collection.findOne({ _id: '640fe563bc6ac64b1cb2a91f' });
       result[collectionName] = data;
       console.log(`Fetched data from collection: ${collectionName}`, data);
@@ -36,7 +41,7 @@ app.get('/api/cv', async (req, res) => {
     // Fetch intro based on introId from user data
     if (result.users && result.users.introId) {
       console.log('Fetching intro data');
-      const introCollection = client.db('CV').collection('intro');
+      const introCollection = client.db('cvMean').collection('intro');
       const introData = await introCollection.findOne({ _id: result.users.introId });
       result.intro = introData;
       console.log('Fetched intro data', introData);
@@ -45,7 +50,7 @@ app.get('/api/cv', async (req, res) => {
     // Fetch expertise based on expertiseId from user data
     if (result.users && result.users.expertiseId) {
       console.log('Fetching expertise data');
-      const expertiseCollection = client.db('CV').collection('expertise');
+      const expertiseCollection = client.db('cvMean').collection('expertise');
       const expertiseData = await expertiseCollection.findOne({ _id: result.users.expertiseId });
       result.expertise = expertiseData;
       console.log('Fetched expertise data', expertiseData);
@@ -54,7 +59,7 @@ app.get('/api/cv', async (req, res) => {
     // Fetch skills based on skillsId from user data
     if (result.users && result.users.skillsId) {
       console.log('Fetching skills data');
-      const skillsCollection = client.db('CV').collection('skills');
+      const skillsCollection = client.db('cvMean').collection('skills');
       const skillsData = await skillsCollection.findOne({ _id: result.users.skillsId });
       result.skills = skillsData;
       console.log('Fetched skills data', skillsData);
@@ -63,7 +68,7 @@ app.get('/api/cv', async (req, res) => {
     // Fetch experience based on experienceId from user data
     if (result.users && result.users.experienceId) {
       console.log('Fetching experience data');
-      const experienceCollection = client.db('CV').collection('experience');
+      const experienceCollection = client.db('cvMean').collection('experience');
       const experienceData = await experienceCollection.findOne({ _id: result.users.experienceId });
       result.experience = experienceData;
       console.log('Fetched experience data', experienceData);
@@ -72,7 +77,7 @@ app.get('/api/cv', async (req, res) => {
     // Fetch education based on educationId from user data
     if (result.users && result.users.educationId) {
       console.log('Fetching education data');
-      const educationCollection = client.db('CV').collection('education');
+      const educationCollection = client.db('cvMean').collection('education');
       const educationData = await educationCollection.findOne({ _id: result.users.educationId });
       result.education = educationData;
       console.log('Fetched education data', educationData);
