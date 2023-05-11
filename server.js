@@ -20,9 +20,6 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
 console.log('Attempting to connect to MongoDB...');
 
 app.get('/api/cv', async (req, res) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
 
   console.log('Received request for /api/cv');
   try {
