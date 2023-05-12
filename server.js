@@ -18,7 +18,8 @@ const uri = 'mongodb+srv://aws:aws@cvmean.bc7hasf.mongodb.net/?retryWrites=true&
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverSelectionTimeoutMS: 10000 });
 console.log('Attempting to connect to MongoDB...');
 
-app.get('/api/cv', async (req, res) => {
+
+app.get('/api/cv', async (req, res) => {// Update with your Angular app's domain
 
   console.log('Received request for /api/cv');
   try {
