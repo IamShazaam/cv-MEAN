@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: '/api/cv'
+  apiUrl: 'https://www.teampereda.com/api/cv'
 };
