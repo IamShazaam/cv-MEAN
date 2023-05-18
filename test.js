@@ -1,12 +1,8 @@
-const Amplify = require('aws-amplify');
-const awsConfig = require('./aws-exports');
+//Packages required for backEnd
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const MongoClient = require('mongodb').MongoClient;
-
-// Configure Amplify
-Amplify.configure(awsConfig);
 
 //Initializing express app
 const app = express();
@@ -22,7 +18,11 @@ const uri = 'mongodb+srv://aws:aws@cvmean.bc7hasf.mongodb.net/?retryWrites=true&
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverSelectionTimeoutMS: 10000 });
 console.log('Attempting to connect to MongoDB...');
 
+
 app.get('/api/cv', async (req, res) => {
+
+  // Update with your Angular app's domain
+
   console.log('Received request for /api/cv');
   try {
     const result = {};
@@ -81,6 +81,7 @@ app.get('/api/cv', async (req, res) => {
       result.education = educationData;
       console.log('Fetched education data', educationData);
     }
+
 
     // Fetching data as JSON
     console.log('Sending fetched data as JSON response');

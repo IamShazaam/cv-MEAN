@@ -1,0 +1,3 @@
+aws-Shazam
+Access Key: AKIAQVREYSTLX4RFNXM6
+Secret Access Key: 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

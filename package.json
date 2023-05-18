@@ -1,6 +1,9 @@
 {
   "name": "cv-mean",
   "version": "0.0.0",
+  "engines": {
+    "node": "18.*"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -18,6 +21,7 @@
     "@angular/platform-browser": "^15.2.0",
     "@angular/platform-browser-dynamic": "^15.2.0",
     "@angular/router": "^15.2.0",
+    "aws-amplify": "^5.2.1",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "express": "^4.18.2",
