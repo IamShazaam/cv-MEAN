@@ -1,0 +1,28 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-cvmean-dev-205830-authRole",
+      "UnauthRoleArn": "arn:aws:iam::046248006871:role/amplify-cvmean-dev-205830-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::046248006871:role/amplify-cvmean-dev-205830-authRole",
+      "Region": "eu-north-1",
+      "DeploymentBucketName": "amplify-cvmean-dev-205830-deployment",
+      "UnauthRoleName": "amplify-cvmean-dev-205830-unauthRole",
+      "StackName": "amplify-cvmean-dev-205830",
+      "StackId": "arn:aws:cloudformation:eu-north-1:046248006871:stack/amplify-cvmean-dev-205830/fe250620-f5ad-11ed-8464-0e96bba35186",
+      "AmplifyAppId": "d3al8og6y9q7tr"
+    }
+  },
+  "cvmean": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-cvmean-cvmean-192426-authRole",
+      "UnauthRoleArn": "arn:aws:iam::046248006871:role/amplify-cvmean-cvmean-192426-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::046248006871:role/amplify-cvmean-cvmean-192426-authRole",
+      "Region": "eu-north-1",
+      "DeploymentBucketName": "amplify-cvmean-cvmean-192426-deployment",
+      "UnauthRoleName": "amplify-cvmean-cvmean-192426-unauthRole",
+      "StackName": "amplify-cvmean-cvmean-192426",
+      "StackId": "arn:aws:cloudformation:eu-north-1:046248006871:stack/amplify-cvmean-cvmean-192426/01e69b90-f66a-11ed-b2ab-06c9a453b312",
+      "AmplifyAppId": "d3al8og6y9q7tr"
+    }
+  }
+}
