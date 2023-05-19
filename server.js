@@ -1,12 +1,30 @@
 const Amplify = require('aws-amplify');
-const awsConfig = require('./aws-exports');
+// import { Amplify } from "aws-amplify"
+const awsConfig = require('./src/aws-exports').default;
+// import { awsConfig } from "./src/aws-exports"
+
+Amplify.configure({
+  Auth: {
+    // REQUIRED - Amazon Cognito Identity Pool ID
+    identityPoolId: 'eu-north-1:14a282c5-339a-4c90-8f6f-dbf01372e7ee',
+    // REQUIRED - Amazon Cognito Region
+    region: 'EU_NORTH_1',
+    // OPTIONAL - Amazon Cognito User Pool ID
+    userPoolId: 'eu-north-1_9EfRkPZif',
+    // OPTIONAL - Amazon Cognito Web Client ID
+    userPoolWebClientId: 'eu-north-1_9EfRkPZif',
+  },
+  Storage: {
+    bucket: 's3 bucket', // REQUIRED -  Amazon S3 bucket
+    // region: 'XX-XXXX-X', // OPTIONAL -  Amazon service region
+  },
+});
+
+
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const MongoClient = require('mongodb').MongoClient;
-
-// Configure Amplify
-Amplify.configure(awsConfig);
 
 //Initializing express app
 const app = express();
