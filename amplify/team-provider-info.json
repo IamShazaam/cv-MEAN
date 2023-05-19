@@ -24,5 +24,18 @@
       "StackId": "arn:aws:cloudformation:eu-north-1:046248006871:stack/amplify-cvmean-cvmean-192426/01e69b90-f66a-11ed-b2ab-06c9a453b312",
       "AmplifyAppId": "d3al8og6y9q7tr"
     }
+  },
+  "teampereda": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-cvmean-teampereda-04952-authRole",
+      "UnauthRoleArn": "arn:aws:iam::046248006871:role/amplify-cvmean-teampereda-04952-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::046248006871:role/amplify-cvmean-teampereda-04952-authRole",
+      "Region": "eu-north-1",
+      "DeploymentBucketName": "amplify-cvmean-teampereda-04952-deployment",
+      "UnauthRoleName": "amplify-cvmean-teampereda-04952-unauthRole",
+      "StackName": "amplify-cvmean-teampereda-04952",
+      "StackId": "arn:aws:cloudformation:eu-north-1:046248006871:stack/amplify-cvmean-teampereda-04952/7884ff30-f697-11ed-a416-0ecabfa41d0e",
+      "AmplifyAppId": "d3al8og6y9q7tr"
+    }
   }
 }
