@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class GithubServiceService {
+export class GithubService {
 
   private apiUrl = 'https://api.github.com/users/iamshazaam/events';
 
