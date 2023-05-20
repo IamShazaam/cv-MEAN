@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FooterComponent } from './footer.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { CvService } from '../cv.service';
 
 describe('FooterComponent', () => {
   let component: FooterComponent;
@@ -8,7 +10,9 @@ describe('FooterComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FooterComponent ]
+      imports: [HttpClientTestingModule],
+      declarations: [ FooterComponent ],
+      providers: [CvService]
     })
     .compileComponents();
 
