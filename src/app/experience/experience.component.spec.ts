@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ExperienceComponent } from './experience.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { CvService } from '../cv.service';
 
 describe('ExperienceComponent', () => {
   let component: ExperienceComponent;
@@ -8,7 +10,9 @@ describe('ExperienceComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ExperienceComponent ]
+      imports: [HttpClientTestingModule],
+      declarations: [ ExperienceComponent ],
+      providers: [CvService]
     })
     .compileComponents();
 

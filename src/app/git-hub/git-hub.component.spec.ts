@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { GitHubComponent } from './git-hub.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { CvService } from '../cv.service';
 
 describe('GitHubComponent', () => {
   let component: GitHubComponent;
@@ -8,7 +10,9 @@ describe('GitHubComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GitHubComponent ]
+      imports: [HttpClientTestingModule],
+      declarations: [ GitHubComponent ],
+      providers: [CvService]
     })
     .compileComponents();
 

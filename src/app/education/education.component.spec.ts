@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 import { EducationComponent } from './education.component';
+import { CvService } from '../cv.service';
 
 describe('EducationComponent', () => {
   let component: EducationComponent;
@@ -8,7 +10,9 @@ describe('EducationComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EducationComponent ]
+      imports: [HttpClientTestingModule],
+      declarations: [EducationComponent],
+      providers: [CvService]
     })
     .compileComponents();
 
