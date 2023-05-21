@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'cvMean'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_DA83E269FEB44D77AAF506599EEC3118 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A56D039B4E3B4D1DA46AF4531511937B }}
           package: .
